@@ -1,26 +1,31 @@
-import React from 'react';
+import React from "react";
 
-import { BrowserRouter, Switch, Route } from 'react-router-dom';
+import { BrowserRouter, Switch, Route } from "react-router-dom";
 
-import Header from './components/header/Header';
-import Main from './components/main/Main'
-import Footer from './components/footer/Footer';
+import Header from "./components/header/Header";
+import Main from "./components/main/Main";
+import Footer from "./components/footer/Footer";
+import Atelier from "./components/atelier/Atelier";
+import Shop from "./components/shop/Shop";
+import Order from "./components/order/Order";
+import CardProduct from "./components/CardProduct/CardProduct";
 
-import './App.css';
+import "./App.css";
 
 function App() {
   return (
     <div className="App">
-      <Header />
-        <BrowserRouter>
+      <BrowserRouter>
+        <Header />
           <Switch>
             <Route exact path="/" component={Main} />
-            <Route exact path="/shop" component={Footer} />
-            <Route exact path="/atelier" component={Footer} />
-            <Route exact path="/order" component={Footer} />
+            <Route exact path="/shop" component={Shop} />
+            <Route exact path="/atelier" component={Atelier} />
+            <Route exact path="/order" component={Order} />
+            <Route exact path="/shop/:name" component={CardProduct} />
           </Switch>
-        </BrowserRouter>
-      <Footer />
+        <Footer />
+      </BrowserRouter>
     </div>
   );
 }
