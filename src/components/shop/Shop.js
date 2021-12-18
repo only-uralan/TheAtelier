@@ -1,53 +1,52 @@
 import React from "react";
-import { useHistory } from "react-router-dom";
-
+import { useNavigate } from "react-router-dom";
 import "./Shop.css";
+import cloak from "./1.jpg"
 
 const dataBase = [
   {
     id: 1,
-    name: "Платье",
-    color: "Красное",
-    price: 222222,
+    name: "Пальто",
+    price: 14990,
   },
   {
     id: 2,
-    name: "Носки",
-    color: "Красное",
-    price: 222222,
+    name: "Пальто",
+    price: 14990,
   },
   {
     id: 3,
-    name: "Шорты",
-    color: "Красное",
-    price: 222222,
+    name: "Костюм",
+    price: 10990,
   },
   {
     id: 4,
-    name: "Рубашка",
-    color: "Красное",
-    price: 222222,
+    name: "Костю",
+    price: 10990,
   },
 ];
 
 const Product = ({ name, color, price }) => {
-  const history = useHistory()
+  const navigate = useNavigate()
   return (
-    <div onClick={() => history.push(`shop/${name}`)}>
-      <img src="asdfasdf" alt={name}></img>
-      <p>{name}</p>
-      <p>{color}</p>
+    <div>
+      <div className="product-card" onClick={() => navigate(`${name}`)}>
+        <img src={cloak} alt={name}></img>
+        <p>{name}</p>
+        
+      </div>
       <p>{price} рублей</p>
     </div>
+      
   );
 };
 
 const Shop = () => {
   return (
-    <div>
-      <h1>Catalog</h1>
+    <div className="shop-container">
+      <h2>Catalog</h2>
       {
-        dataBase.map(({id, name, color, price }) => {
+        dataBase.map(({ id, name, color, price }) => {
           return <Product key={id} name={name} color={color} price={price} />
         })
       }

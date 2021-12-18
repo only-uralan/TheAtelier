@@ -1,22 +1,29 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
+import logo from "./2.jpg";
+import shop from "./1.jpg";
+import collection from "./3.jpg";
+
 
 import "./Main.css";
 
 const Main = () => {
   return (
     <main>
-      <div class="mainpage">
-        <div class="new-collection">new-collection</div>
-        <NavLink to="/shop">
-          <div class="shop">Shop</div>
-        </NavLink>
-        <NavLink to="/atelier">
-          <div class="atelier">Atelier</div>
-        </NavLink>
-        <div class="outerwear">Верхняя одежда</div>
-        <div class="dress">Платья</div>
-        <div class="accessories">Аксессуары</div>
+      <div className="mainpage-container">
+        <div className="new-collection">
+          <img src={collection} className="new-collection__image"/>
+        </div>  
+          <div className="shop">
+            <NavLink to="/shop">
+              <img src={shop} className="shop__image"/>
+            </NavLink>
+          </div>       
+          <div className="atelier">
+            <NavLink to="/atelier">
+              <img src={logo} className="atelier__image"/>
+            </NavLink>
+          </div>
       </div>
     </main>
   );

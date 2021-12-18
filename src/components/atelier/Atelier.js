@@ -4,7 +4,7 @@ import "./Atelier.css";
 
 const Atelier = () => {
   return (
-    <div>
+    <div className="main">
       <h1>Atelier. Пошив одежды</h1>
       <div>
         <h2>Список предостовляемых услуг</h2>

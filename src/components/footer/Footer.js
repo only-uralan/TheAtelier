@@ -4,13 +4,14 @@ import "./Footer.css";
 
 const Footer = () => {
   return (
-    <footer>
+    <footer className="footer">
       <div>
         <h3>Контакты</h3>
         <ul>
           <li>Email</li>
           <li>Телефон</li>
           <li>Адрес</li>
+          <li>Личный кабинет</li>
         </ul>
       </div>
       <div>

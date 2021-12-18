@@ -1,37 +1,50 @@
-.mainpage {
+main {
+    flex: 1 0 auto;
+}
+
+.mainpage-container {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-between;
 }
 
-.mainpage div {
+.mainpage-container div {
     border: 1px solid red;
 }
 
 .new-collection {
-    width: 100vw;
+    width: 100%;
     height: 300px;
+    margin: 4px 12px;
+    border-radius: 10px;
+    overflow: hidden;
 }
 
 .shop {
-    width: 50%;
-    height: 200px;
+    width: 48%;
+    height: 230px;
+    margin: 4px 12px;
+    border-radius: 10px;
+    overflow: hidden;
 }
 
 .atelier {
-    width: 50%;
-    height: 200px;
-}
-
-.outerwear, 
-.dress,
-.accessories {
-
-    width: 33%;
-    height: 200px;
+    width: 48%;
+    height: 230px;
+    margin: 4px 12px;
+    border-radius: 10px;
+    overflow: hidden;
 }
 
 li {
     list-style: none;
+}
+
+.new-collection__image,
+.shop__image,
+.atelier__image {
+    width: 100%;
+    height: 100%;
+    object-fit: fill;
 }

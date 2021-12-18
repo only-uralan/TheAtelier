@@ -1,0 +1,40 @@
+.shop-container {
+    padding: 4px 12px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    flex: 1 0 auto;
+    width: 100%;
+
+}
+
+.shop-container h2 {
+    padding: 8px;
+    min-width: 100vw;
+    text-align: center;
+}
+
+img {
+        cursor: pointer;
+}
+
+img + p {
+    cursor: pointer;
+    font-size: 24px;
+    margin: 4px auto;
+}
+
+img + p:hover {
+    opacity: 0.5;
+    transition: opacity 0.5s;
+    
+}
+
+.product-card {
+    margin: 36px 12px 0;
+    text-align: center;
+}
+
+.product-card + p {
+    text-align: center;
+}

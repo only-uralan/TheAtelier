@@ -1,3 +1,4 @@
-.container {
+.order-container {
   display: flex;
+  flex: 1 0 auto;
 }

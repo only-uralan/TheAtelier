@@ -1,6 +1,6 @@
 import React from "react";
 
-import { BrowserRouter, Switch, Route } from "react-router-dom";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 
 import Header from "./components/header/Header";
 import Main from "./components/main/Main";
@@ -17,13 +17,13 @@ function App() {
     <div className="App">
       <BrowserRouter>
         <Header />
-          <Switch>
-            <Route exact path="/" component={Main} />
-            <Route exact path="/shop" component={Shop} />
-            <Route exact path="/atelier" component={Atelier} />
-            <Route exact path="/order" component={Order} />
-            <Route exact path="/shop/:name" component={CardProduct} />
-          </Switch>
+          <Routes>
+            <Route path={"/"} element={<Main/>} />
+            <Route path={"/shop"} element={<Shop/>} />
+            <Route path={"/atelier"} element={<Atelier/>} />
+            <Route path={"/order"} element={<Order/>} />
+            <Route path={"/shop/:name"} element={<CardProduct/>} />
+          </Routes>
         <Footer />
       </BrowserRouter>
     </div>
