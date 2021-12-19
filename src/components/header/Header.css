@@ -28,4 +28,17 @@ header a {
     display: flex;
     justify-content: space-between;
     width: 15%;
+    height: fit-content;
+}
+
+
+.order-icon {
+    width: 30px;
+    height: 30px;
+    padding-right: 8px;
+    vertical-align: top;
+}
+
+span {
+    color: #000;
 }

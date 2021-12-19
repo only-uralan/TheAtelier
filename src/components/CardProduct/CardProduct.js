@@ -1,36 +1,29 @@
 import React, { useState } from "react";
 import { useParams } from 'react-router-dom';
-import "./CardProduct";
-// import Shop from "./components/shop/Shop";
+import "./CardProduct.css";
+import OrderCounter from "./OrderCounter";
 
-const CardProduct = (orders) => {
+
+
+const CardProduct = () => {
+ 
+  const {name} = useParams();
   
-  const {name} = useParams()
-
-  const [orders, setOrders] = useState(0);
-  function orderIncrement() {
-    setOrders(orders + 1)
-  }
-  function orderDecrement() {
-    setOrders(orders - 1)
-  }
-
   return (
     <div className="card-container">
-      <img src="asdfsda" alt="asaf"/>
-      <h2>{name}</h2>
-      <p>Артикул</p>
-      <p>Цена</p>
-      <p>Описание</p>
-
-      <p>{orders}</p>
-      <button onClick={orderIncrement}>в корзину</button>
-      <button onClick={orderDecrement}>из корзины</button>
+      <img src="https://firebasestorage.googleapis.com/v0/b/innopolis-project-a1999.appspot.com/o/1.jpg?alt=media&token=dc925f94-9b2b-415d-89bf-9c41dd3fc0a9" alt="asaf"/>
+      <div className="card-description">
+        <h2>{name}</h2>
+        <p>14990</p>
+        <p>Цена</p>
+        <p>Описание</p>
+        <OrderCounter/>
+      </div>
     </div>
-  )
-}
+  );
+};
 
-  
+
   
 
 

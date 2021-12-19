@@ -1,9 +1,13 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import CardProduct from "../CardProduct/CardProduct";
+import OrderCounter from "../CardProduct/OrderCounter";
 import "./Header.css";
+import { Context } from "../../App"; 
 
 const Header = () => {
+  const {data} = React.useContext(Context)
+  
+
   return (
     <header>
       <Link to={"/"}>
@@ -15,14 +19,13 @@ const Header = () => {
             <li>О нас</li>
             <li>Контакты</li>
           </ul>
-          <ul className="header__order-lc">
+          <div className="header__order-lc">
             <Link to={"/order"}>
-              <li>Корз 0</li>
+              <img src="https://assets3.insales.ru/assets/1/3692/1412716/1588927979/basket_k.svg"
+                className="order-icon"/>
+              <span>{data}</span>
             </Link>
-            {/* <Link to={"/lc"}>
-              <li>ЛК</li>
-            </Link> */}
-          </ul>
+          </div>
       </div>
     </header>
   );

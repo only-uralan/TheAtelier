@@ -1,5 +1,13 @@
-div.card-container {
+.card-container {
+    padding: 20px;
+    min-height: 70vh;
     flex: 1 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+}
 
+img {
+    height: 300px;
+    padding-right: 32px;
 }
 

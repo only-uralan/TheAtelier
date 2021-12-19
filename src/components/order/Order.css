@@ -1,4 +1,6 @@
 .order-container {
   display: flex;
   flex: 1 0 auto;
+  min-height: 70vh;
 }
+

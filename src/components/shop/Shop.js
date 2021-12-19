@@ -2,31 +2,10 @@ import React from "react";
 import { useNavigate } from "react-router-dom";
 import "./Shop.css";
 import cloak from "./1.jpg"
+import { dataBase } from "../ProductDB/ProductDB";
 
-const dataBase = [
-  {
-    id: 1,
-    name: "Пальто",
-    price: 14990,
-  },
-  {
-    id: 2,
-    name: "Пальто",
-    price: 14990,
-  },
-  {
-    id: 3,
-    name: "Костюм",
-    price: 10990,
-  },
-  {
-    id: 4,
-    name: "Костю",
-    price: 10990,
-  },
-];
 
-const Product = ({ name, color, price }) => {
+export const Product = ({ name, price }) => {
   const navigate = useNavigate()
   return (
     <div>
@@ -37,7 +16,6 @@ const Product = ({ name, color, price }) => {
       </div>
       <p>{price} рублей</p>
     </div>
-      
   );
 };
 
@@ -46,8 +24,8 @@ const Shop = () => {
     <div className="shop-container">
       <h2>Catalog</h2>
       {
-        dataBase.map(({ id, name, color, price }) => {
-          return <Product key={id} name={name} color={color} price={price} />
+        dataBase.map(({ id, name, price }) => {
+          return <Product key={id} name={name} price={price} />
         })
       }
     </div>

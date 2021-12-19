@@ -9,25 +9,35 @@ import Atelier from "./components/atelier/Atelier";
 import Shop from "./components/shop/Shop";
 import Order from "./components/order/Order";
 import CardProduct from "./components/CardProduct/CardProduct";
+import OrderCounter from "./components/CardProduct/OrderCounter";
 
 import "./App.css";
 
+export const Context = React.createContext();
+
+
 function App() {
+  const [data, setData] = React.useState('0');
+  const value = {data: data, setData: setData }
+
   return (
     <div className="App">
-      <BrowserRouter>
-        <Header />
+      <Context.Provider value={value}>
+        <BrowserRouter>
+          <Header />
           <Routes>
-            <Route path={"/"} element={<Main/>} />
-            <Route path={"/shop"} element={<Shop/>} />
-            <Route path={"/atelier"} element={<Atelier/>} />
-            <Route path={"/order"} element={<Order/>} />
-            <Route path={"/shop/:name"} element={<CardProduct/>} />
+            <Route path={"/"} element={<Main />} />
+            <Route path={"/shop"} element={<Shop />} />
+            <Route path={"/atelier"} element={<Atelier />} />
+            <Route path={"/order"} element={<Order />} />
+            <Route path={"/shop/:name"} element={<CardProduct />} />
           </Routes>
-        <Footer />
-      </BrowserRouter>
+          <Footer />
+        </BrowserRouter>
+      </Context.Provider>
     </div>
   );
 }
+
 
 export default App;
