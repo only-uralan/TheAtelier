@@ -9,7 +9,7 @@ import Atelier from "./components/atelier/Atelier";
 import Shop from "./components/shop/Shop";
 import Order from "./components/order/Order";
 import CardProduct from "./components/CardProduct/CardProduct";
-import OrderCounter from "./components/CardProduct/OrderCounter";
+
 
 import "./App.css";
 

@@ -12,16 +12,16 @@ const Main = () => {
     <main>
       <div className="mainpage-container">
         <div className="new-collection">
-          <img src={collection} className="new-collection__image"/>
+          <img src={collection} className="new-collection__image" alt="New-collection"/>
         </div>  
           <div className="shop">
             <NavLink to="/shop">
-              <img src={shop} className="shop__image"/>
+              <img src={shop} className="shop__image" alt="shop"/>
             </NavLink>
           </div>       
           <div className="atelier">
             <NavLink to="/atelier">
-              <img src={logo} className="atelier__image"/>
+              <img src={logo} className="atelier__image" alt="atelier"/>
             </NavLink>
           </div>
       </div>

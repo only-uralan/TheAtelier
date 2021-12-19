@@ -2,7 +2,7 @@ import React from "react";
 import { useState } from "react";
 import "./Order.css";
 import { dataBase } from "../ProductDB/ProductDB";
-import { Product } from "../shop/Shop";
+
 
 const Order = () => {
 
