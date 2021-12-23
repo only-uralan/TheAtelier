@@ -1,19 +1,19 @@
-import React from "react";
-import { Context } from "../../App"; 
+import React, {useContext} from "react";
+import { Context } from "../../App";
 
 import "./OrderCounter.css"
 
 const OrderCounter = () => {
 
-    const data = React.useContext(Context);
+    const data = useContext(Context);
 
     function orderIncrement() {
         data.setData(Number(data.data) + 1)
     }
-    
+
     return (
         <div>
-            <button onClick={orderIncrement} className="orderIncrement">в корзину</button>
+            <button onClick={orderIncrement} className="order-increment">в корзину</button>
         </div>
     )
 }
